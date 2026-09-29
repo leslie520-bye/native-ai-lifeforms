@@ -2,6 +2,11 @@
 
 > 从脚本化 NPC，到会**自己商量、自己干活、出事了自己改计划**的数字同伴。
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)
+![Zero LLM on critical path](https://img.shields.io/badge/LLM%20on%20critical%20path-0-brightgreen.svg)
+
+
 本仓库沉淀自两个可运行的 Windows 功能原型：
 
 | 原型 | 引擎 | 演示内容 |
@@ -58,6 +63,36 @@
 - **多智能体协商（Negotiation）**：开场 ~20 秒内，两个 agent 通过提案-反提案-确认协议就分工达成一致，并以中文语音播报（离线 TTS，无需联网）。
 - **事件重规划（Replanning）**：世界事件（同伴 HP 归零、资源点被封锁）触发当前意图撤销、目标图重算、分工重谈，全过程 < 1 秒。
 - **LLM 可插拔**：核心规划零 LLM 调用；仅在开放对话、即兴表演、动态剧情分支处通过 `LLMAdapter` 接云端或本地模型。
+
+### 架构图
+
+```mermaid
+flowchart TD
+    subgraph L6[渲染层]
+        U[Unity] --- E[Unreal] --- W[Web / 数字人]
+    end
+    subgraph L5[协议层]
+        gRPC[gRPC / WebSocket]
+    end
+    subgraph L4[适配层]
+        LLM[LLM Adapter<br/>开放对话]
+        TTS[TTS Adapter<br/>语音]
+    end
+    subgraph L3[自治内核 · 离线 · 毫秒级]
+        BDI[BDI 循环]
+        TG[目标图 HTN]
+        NEG[协商协议]
+        REPLAN[事件重规划]
+    end
+    subgraph L2[世界模型]
+        STATE[状态快照]
+        EVENTS[事件队列]
+    end
+    L6 --> gRPC --> L3
+    L4 -.可选.-> L3
+    L3 --> L2
+    L2 --> L3
+```
 
 ---
 
