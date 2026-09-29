@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+.venv/
+venv/
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build artifacts / demo binaries (do NOT ship the closed-source game builds)
+*.exe
+*.dll
+*.unity3d
+*.pak
+*.ucas
+*.utoc
+*.pdb
+MontaNpcCampDemo_Data/
+WindowsNoEditor/
+
+# Docs build
+docs/_build/

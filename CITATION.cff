@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this project or the accompanying paper in your research, please cite it as below."
+title: "Native AI Lifeforms: A Lightweight Autonomous Agent Architecture for Long-Horizon Collaborative NPC Behavior"
+type: software
+authors:
+  - family-names: "Contributors"
+    given-names: "Native AI Lifeforms"
+version: 0.1.0
+date-released: 2026-09-29
+url: "https://github.com/your-org/native-ai-lifeforms"
+preferred-citation:
+  type: article
+  title: "Native AI Lifeforms in Virtual Worlds: From Scripted NPCs to Negotiating, Re-planning Autonomous Agents"
+  authors:
+    - family-names: "Contributors"
+      given-names: "Native AI Lifeforms"
+  year: 2026
+  journal: "Manuscript in preparation"
