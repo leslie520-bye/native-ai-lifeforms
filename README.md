@@ -93,7 +93,7 @@ native-ai-lifeforms/
 ## 快速开始
 
 ```bash
-git clone https://github.com/your-org/native-ai-lifeforms.git
+git clone https://github.com/leslie520-bye/native-ai-lifeforms.git
 cd native-ai-lifeforms
 pip install -r requirements.txt
 python -m examples.camp_demo

@@ -1,7 +1,7 @@
 # Native AI Lifeforms: A Lightweight Rule-Based Autonomous Agent Architecture for Long-Horizon Collaborative NPC Behavior
 
 **Manuscript in preparation.** Correspondence: native-ai-lifeforms contributors.
-**Artifact:** https://github.com/your-org/native-ai-lifeforms (open source, MIT).
+**Artifact:** https://github.com/leslie520-bye/native-ai-lifeforms (open source, MIT).
 
 ---
 
